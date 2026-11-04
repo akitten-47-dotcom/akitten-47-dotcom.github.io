@@ -1,0 +1,115 @@
+/* ===========================================================
+   Obsidian Mountain - styles
+   Dark "obsidian" look with bone-colored lines and an ember accent.
+   Change the colors in one place: the :root block below.
+   =========================================================== */
+
+:root {
+  --obsidian: #0d0d0f;   /* page background */
+  --panel:    #17171b;   /* cards / raised areas */
+  --bone:     #e8e2d4;   /* main text and lines */
+  --muted:    #9a9588;   /* secondary text */
+  --ember:    #e2582b;   /* accent color (buttons, hover) */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--obsidian);
+  color: var(--bone);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  text-align: center;
+  padding: 3rem 1rem 1.5rem;
+  border-bottom: 1px solid #2a2a30;
+}
+.logo { width: 90px; height: 90px; }
+.site-header h1 {
+  margin: 0.75rem 0 0.25rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.tagline { margin: 0; color: var(--muted); font-style: italic; }
+
+nav { margin-top: 1.25rem; }
+nav a {
+  color: var(--bone);
+  text-decoration: none;
+  margin: 0 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+nav a:hover { color: var(--ember); }
+
+/* ---------- Sections ---------- */
+main { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+section { padding: 2.5rem 0; border-bottom: 1px solid #2a2a30; }
+section h2 {
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+a { color: var(--ember); }
+
+/* ---------- Product cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid #2a2a30;
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+.card .photo {
+  /* Placeholder box until you have a product photo */
+  height: 160px;
+  border: 1px dashed #3a3a42;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.card .photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+.card h3 { margin: 0 0 0.25rem; font-weight: normal; }
+.card .price { color: var(--muted); margin: 0 0 0.5rem; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--ember);
+  color: var(--bone);
+  background: transparent;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.btn:hover { background: var(--ember); }
+.btn.disabled {
+  border-color: #3a3a42;
+  color: var(--muted);
+  cursor: not-allowed;
+  background: transparent;
+}
+
+.placeholder { color: var(--muted); font-style: italic; }
+
+/* ---------- Footer ---------- */
+footer { text-align: center; color: var(--muted); padding: 2rem 1rem; font-size: 0.85rem; }
