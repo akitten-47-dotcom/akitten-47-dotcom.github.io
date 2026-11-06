@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obsidian Mountain | Modern scents for the moonshiner soul</title>
+  <meta name="description" content="Small-batch soap from the Tennessee mountains." />
+
+  <!-- Fonts (Google Fonts). If they fail to load, the site falls back to system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- All the styling lives in style.css (same folder as this file) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <!-- Your Canva logo (logo.png, same folder). Its purple background matches the
+         hero color in style.css, so it blends in. To swap logos later, replace logo.png
+         with a new file of the same name (a transparent PNG works great too). -->
+    <!-- width/height and the inline style are a safety net: even if style.css doesn't
+         load, the logo stays small and centered. To resize, change the 300 below
+         (and the 300px in style.css under .hero-logo). -->
+    <img class="hero-logo" src="logo.png" alt="Obsidian Mountain Soap Co. logo"
+         width="300" height="406" style="display:block;margin:0 auto;max-width:80%;height:auto;" />
+
+    <!-- The logo already shows the name, so the h1 is hidden visually but kept for
+         search engines and screen readers. -->
+    <h1 class="sr-only">Obsidian Mountain Soap Co.</h1>
+
+    <div class="hero-text">
+      <p class="tagline">Modern scents for the moonshiner soul</p>
+
+      <nav>
+        <a href="#products">Soap</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== PRODUCTS ===================== -->
+    <section id="products">
+      <h2>The Soap</h2>
+
+      <!-- The product grid is filled in by script.js from the PRODUCTS list at the
+           top of that file. To add a soap, edit script.js, not this file. -->
+      <div id="product-grid" class="grid"></div>
+    </section>
+
+    <!-- ===================== SQUARE SECTION (PLACEHOLDER) =====================
+         THIS IS WHERE YOUR SQUARE STUFF GOES WHEN YOU'RE READY TO SELL.
+
+         Easiest route (no code):
+           1. In your Square Dashboard, create a "Payment Link" (or a Square Online
+              checkout link) for each product.
+           2. Paste that link into script.js, into the "squareLink" field of the product.
+              The Buy button on that product will turn on automatically.
+
+         Fancier route (store embed):
+           If Square gives you an embed code (<script> or <iframe>) for a full store or
+           buy button, paste it inside the <div id="square-embed"> below and delete
+           the placeholder paragraph. -->
+    <section id="shop">
+      <h2>Order</h2>
+
+      <div id="square-embed">
+        <!-- >>> PASTE SQUARE EMBED CODE HERE (optional) <<< -->
+        <p class="placeholder">Ordering opens soon. Check back, or message me below.</p>
+      </div>
+    </section>
+    <!-- ===================== END SQUARE SECTION ===================== -->
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Obsidian Mountain is small-batch soap with a modern edge and Tennessee mountain roots.
+        Write your own story here: who you are, why you started making soap, and what goes into it.
+      </p>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <!-- Replace with your real business email or social link -->
+      <p>Questions or custom orders: <a href="mailto:YOUR-EMAIL-HERE">YOUR-EMAIL-HERE</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Obsidian Mountain</p>
+  </footer>
+
+  <!-- All the behavior lives in script.js (same folder as this file) -->
+  <script src="script.js"></script>
+</body>
+</html>
